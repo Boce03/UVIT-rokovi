@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="recept" method="POST" action="/recept">
+        <input type="text" name="imeprezime" value='<%= imeprezime %>' hidden>
+        <div id="prikaz"></div>
+        <input type="submit" value="Posalji">
+    </form>
+
+    <script>
+        let l = JSON.parse('<%- JSON.stringify(lekovi) %>');
+        const prikaz = document.getElementById('prikaz');
+
+        prikaz.style.backgroundImage = 'url(/slike/m.jpeg)'
+        prikaz.style.backgroundRepeat = 'repeat-y'
+        prikaz.style.width = '50%';
+        prikaz.style.backgroundPosition = 'right';
+
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Spisak lekova';
+        prikaz.appendChild(h1);
+
+        let n = 1;
+        console.log(l);
+        for(let lek of l){
+          let div = document.createElement('div');
+          prikaz.appendChild(div);
+          div.style.border = '2px solid grey';
+          div.style.marginTop = '20px';
+          div.style.marginBottom = '20px';
+          div.style.marginRight = '20px';
+          div.style.padding = '10px';
+        
+          let text1 = document.createElement('div');
+          div.appendChild(text1);
+          let span1 = document.createElement('span');
+          text1.appendChild(span1);
+          span1.textContent = 'lek: ';
+          span1.style.fontWeight = 'bold';
+          let span2 = document.createElement('span');
+          text1.appendChild(span2);
+          span2.textContent = lek.nazivLeka;
+        
+          let text2 = document.createElement('div');
+          div.appendChild(text2);
+          span1 = document.createElement('span');
+          text2.appendChild(span1);
+          span1.textContent = 'proizvodjac: ';
+          span1.style.fontWeight = 'bold';
+          span2 = document.createElement('span');
+          text2.appendChild(span2);
+          span2.textContent = lek.proizvodjac;
+        
+          let text3 = document.createElement('div');
+          div.appendChild(text3);
+          span1 = document.createElement('span');
+          text3.appendChild(span1);
+          span1.textContent = 'leci: ';
+          span1.style.fontWeight = 'bold';
+          span2 = document.createElement('span');
+          text3.appendChild(span2);
+          span2.textContent = lek.simptomi.join(', ');
+
+          for(let mg of lek.miligrami){
+          let bt = document.createElement('button');
+            div.appendChild(bt);
+            bt.classList.add('lek' + n);
+            bt.style.borderRadius = '100%';
+            bt.style.paddingLeft = '10px';
+            bt.style.paddingRight = '10px';
+            bt.style.marginRight = '5px';
+            bt.textContent = mg;
+            bt.name = lek.nazivLeka;
+
+            bt.addEventListener('click', function(e) {
+            let b = e.target;
+            b.style.backgroundColor = 'red';
+            let dugmici = document.querySelectorAll(`button.${b.classList[0]}`);
+            
+            let forma = document.getElementById('recept');
+            
+            let input1 = document.createElement('input');
+            forma.appendChild(input1);
+            input1.type = 'text';
+            input1.name = 'nazivLeka';
+            input1.value = lek.nazivLeka;
+            input1.hidden = true;
+
+            let input2 = document.createElement('input');
+            forma.appendChild(input2);
+            input2.type = 'text';
+            input2.name = 'mg';
+            input2.value = bt.textContent;
+            input2.hidden = true;
+
+            e.preventDefault();
+
+            for(let dugme of dugmici){
+                if(dugme !== b){
+                    //console.log(dugme, typeof dugme);
+                    dugme.disabled = true;
+                    }
+                }
+            });
+        }
+
+        n++;
+    }
+    </script>
+</body>
+</html>

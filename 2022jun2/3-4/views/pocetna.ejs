@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css">
+</head>
+<body>
+    <div id="prikaz">
+        <h1 id="naslov">Podaci o pacijentu</h1>
+        <form id="forma" method="GET" action="/lekovi">
+            <fieldset>
+                <legend>Licne info</legend>
+                
+                <label for="imeprezime" class="labela">Ime i prezime:</label><br>
+                <input type="text" name="imeprezime" id="imeprezime"><br>
+
+                <label for="jmbg" class="labela">JMBG:</label><br>
+                <input type="text" name="jmbg" id="jmbg">
+            </fieldset>
+
+            <fieldset>
+                <legend>Medicie info</legend>
+                <label class="labela">Simptomi:</label><br>
+                <input type="checkbox" name="upalagrla" id="ch1"><span class="podebljano"><label for="ch1">upala grla</label></span><br>
+                <input type="checkbox" name="curenjenosa" id="ch2"><span class="podebljano"><label for="ch2">curenje nosa</label></span><br>
+                <input type="checkbox" name="temperatura" id="ch3"><span class="podebljano"><label for="ch3">temperatura</label></span><br>
+                <input type="checkbox" name="glavobolja" id="ch4"><span class="podebljano"><label for="ch4">glavobolja</label></span><br>
+            </fieldset>
+
+            <input type="submit" value="Posalji" id="dugme">
+        </form>
+    </div>
+
+    <script>
+        let bt = document.getElementById('forma');
+        console.log(bt);
+        bt.addEventListener('submit', function(e) {
+            let imeprezime = document.getElementById('imeprezime');
+            if(imeprezime.value === ''){
+                console.log('greska1');
+                e.preventDefault();
+                window.alert('Polje imeprezime je obavezno!');
+                return;
+            }
+
+            let jmbg = document.getElementById('jmbg');
+            if(jmbg.value === ''){
+                console.log('greska2');
+                e.preventDefault();
+                window.alert('Polje jmbg je obavezno!');
+                return;
+            }
+
+            if(jmbg.value.length !== 13){
+                console.log('greska3');
+                e.preventDefault();
+                window.alert('jmbg mora sadrzati 13 cifara');
+                return;
+            }
+
+            let ch = document.querySelectorAll('input[type="checkbox"]');
+            let izabran = false;
+            for(let c of ch){
+                if(c.checked == true){
+                    izabran = true;
+                    break;
+                }
+            }
+
+            if(!izabran){
+                e.preventDefault();
+                window.alert('Morate odabrati simptom');
+                return;
+            }
+        });
+    </script>
+</body>
+</html>

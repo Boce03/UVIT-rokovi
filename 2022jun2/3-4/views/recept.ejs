@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #naslov {
+            margin-bottom: 50px;
+        }
+
+        #podebljano {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="naslov">Recept za pacijenta</h1>
+    <div>
+        <span id="podebljano">Pacijent: </span>
+        <span><%= imeprezime %></span>
+    </div>
+    <div><span id="podebljano">Propisano: </span></div>
+
+    <ol>
+        <% for(let r of recept) {%>
+            <li><%= r.nazivLeka %>, <%= r.mg %></li>
+        <% } %>
+    </ol>
+</body>
+</html>

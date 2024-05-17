@@ -1,0 +1,6 @@
+div#prikaz {
+    background-image: url(m.jpeg);
+    background-position: right;
+    background-repeat: repeat-y;
+    width: 50%;
+}
