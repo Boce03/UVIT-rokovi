@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prvi zad</title>
+    <link rel="stylesheet" type="text/css" href="1.css">
+</head>
+<body>
+    <h1 class="naslov"><%= turnir %></h1>
+
+    <div class="loptice"></div>
+
+    <% if(mecevi !== null) {%>
+        <% for(let mec of mecevi) {%>
+            <div class="prikaz">
+                <table class="tabela">
+                    <tr>
+                        <td>Vreme: <%= mec.vreme %></td>
+                    </tr>
+
+                    <tr>
+                        <% let poeni1 = mec.poeni1.split("-")%>
+                        <td><%= mec.igrac1 %></td>
+                        <% for(let gem of poeni1) {%>
+                            <td><%= gem %></td>
+                        <% } %>
+                    </tr>
+
+                    <tr>
+                        <% let poeni2 = mec.poeni2.split("-")%>
+                        <td><%= mec.igrac2 %></td>
+                        <% for(let gem of poeni2) {%>
+                            <td><%= gem %></td>
+                        <% } %>
+                    </tr>
+                </table>
+            </div>
+        <% } %>
+
+        <h1 class="naslov">Dodaj igru</h1>
+
+        <form id="forma" action="/unesiturnir" method="GET">
+            <table>
+                <tr><td>Vreme: <input type="number" name="sati" placeholder="hh">:<input type="number" name="minuti" placeholder="mm">
+                </td></tr>
+                <tr>
+                    <input type="text" name="turnir" value=<%= turnir %> hidden>
+                    <td>
+                        <input type="text" name="igrac1" placeholder="prvi igrac">
+                    </td>
+                    <td>
+                        <input type="number" name="igrac1set1">
+                    </td>
+                    <td>
+                        <input type="number" name="igrac1set2">
+                    </td>
+                    <td>
+                        <input type="number" name="igrac1set3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="igrac2" placeholder="drugi igrac">
+                    </td>
+                    <td>
+                        <input type="number" name="igrac2set1">
+                    </td>
+                    <td>
+                        <input type="number" name="igrac2set2">
+                    </td>
+                    <td>
+                        <input type="number" name="igrac2set3">
+                    </td>
+                </tr>
+            </table>
+            <input id="dodajigru" type="submit" value="unesi igru">
+        </form>
+    <% } else {%>
+        <h1>Nema meceva!</h1>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <% if(turniri !== null) {%>
+        <h1 class="naslov">Teniski turniri</h1>
+        <form id="forma" method="GET" action="/turnir">
+            <select name="turnir" id="opcije">
+                <% for(let t of turniri) { %>
+                    <option value= <%= t %>><%= t %></option>
+                <% } %>
+            </select><br>
+            <input type="submit" value="prikazi turnir">
+        </form>
+    <% } else{ %>
+        <h1>Nema turnira!</h1>
+    <% } %>
+</body>
+</html>

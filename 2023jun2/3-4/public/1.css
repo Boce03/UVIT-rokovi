@@ -1,0 +1,59 @@
+h1.naslov {
+    font-weight: bold;
+    text-align: center;
+}
+
+h1.naslov::before, h1.naslov::after {
+    display: inline-block;
+    content: url(./left.gif);
+}
+
+.loptice {
+    width: 100%;
+    height: 30px;
+    background-image: url(./ball.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+div.prikaz {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 3px green solid;
+    border-radius: 10px;
+}
+
+.tabela {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.tabela td {
+    background-color: rgb(163, 197, 163);
+    width: 30px;
+    height: 30px;
+}
+
+.tabela td:first-child {
+    width: 150px;
+}
+
+.boldirano {
+    font-weight: bold;
+}
+
+#forma table {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#forma input[type='number']{
+    width: 40px;
+}
+
+#forma input[type='submit']{
+    width: 100%;
+}
