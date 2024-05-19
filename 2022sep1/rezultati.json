@@ -1,0 +1,51 @@
+[{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd623"
+	},
+	"username": "sara97",
+	"password": "1234",
+	"poeni": 20,
+	"pitanja":["60b7b8c9c9b0c8665c7f005d","60b7b8c9c9b0c8665c7f005e" ]
+	
+},
+{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd624"
+	},
+	"username": "SM912",
+	"password": "abcd",
+	"poeni":0,
+	"pitanja":[]
+	
+},
+{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd625"
+	},
+	"username": "marko9661",
+	"password": "12345",
+	"poeni": 10,
+	"pitanja":[ "60b7b8c9c9b0c8665c7f005f"]
+	
+},
+
+{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd627"
+	},
+	"username": "marko9661",
+	"password": "12345",
+	"poeni": 15,
+	"pitanja":["60b7b8c9c9b0c8665c7f005d","60b7b8c9c9b0c8665c7f005e" ]
+	
+},
+{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd628"
+	},
+	"username": "marko9661",
+	"password": "12345",
+	"poeni":5,
+	"pitanja":["60b7b8c9c9b0c8665c7f005d"]
+	
+}]

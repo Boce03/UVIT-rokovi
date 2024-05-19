@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005d"
+  },
+  "tekst":"Da li je Novak Djokovic najbolji teniser?",
+  "odgovor": "DA",
+  "oblast": "sport",
+  "tezina": 5
+},{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005e"
+  },
+ "tekst":"Da li je veverica zivotinja?",
+  "odgovor": "DA",
+  "oblast": "biologija",
+  "tezina": 1
+},{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005f"
+  },
+   "tekst":"Da li je pi jednako 3.14?",
+  "odgovor": "NE",
+  "oblast": "matematika",
+  "tezina": 7
+
+},{
+  "_id": {
+    "$oid": "60b7bd0bc9b0c8665c7f0061"
+  },
+  "tekst":"Da li je u toku ispitni rok septembar 2?",
+  "odgovor": "NE",
+  "oblast": "obrazovanje",
+  "tezina": 1
+}]

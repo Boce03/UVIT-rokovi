@@ -1,0 +1,42 @@
+#forma {
+    width: 50%;
+}
+
+#forma p {
+    margin: 0;
+    padding-top: 30px;
+}
+
+.prikaz {
+    position: relative;
+    margin-top: 20px;
+}
+
+.polje {
+    width: 500px;
+    display: inline-block;
+    background-color: green;
+    font-size: 20px;
+    border-radius: 28%;
+    position: absolute;
+    top: 10px;
+    /*border-top-right-radius: 20%;*/
+    
+}
+
+.slika {
+    display: inline-block;
+    width: 35px;
+    height: 60px;
+    background-image: url(1.jpeg);
+    background-repeat: no-repeat;
+    background-position-x: -15px; 
+}
+
+.poeni {
+    margin-top: 50px;
+}
+
+.poeni input[type='text']{
+    width: 150px;   
+}

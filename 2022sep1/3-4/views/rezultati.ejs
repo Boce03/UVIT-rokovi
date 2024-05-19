@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css">
+</head>
+<body>
+    <div id="main">
+
+    <% if(rez.length > 0) {%>
+        <h1>Zdravo, <%= username %></h1>
+
+        <% for(let r of rez) { %>
+            <div class="prikaz">
+                <p>Broj osvojenih poena: <%= r.poeni %></p>
+                <p>Tacno odgovoreno na sledeca pitanja: </p>
+                <ul>
+                    <% for(let p of r.pitanja) {%>
+                        <li><%= p.tekst %></li>
+                    <% } %>
+                </ul>
+            </div>
+        <% } %>
+
+        <form method="POST" action="/novopitanje" id="forma">
+            Dodaj novo pitanje u bazu:<br>
+
+            <label for="pitanje">Pitanje:</label>
+            <input id="pitanje" name="pitanje" type="text"><br>
+
+            <label for="odgovor">Odgovor:</label>
+            <select id="odgovor" name="odgovor">
+                <option value="DA">Da</option>
+                <option value="NE">Ne</option>
+            </select><br>
+
+            <label for="oblast">Oblast:</label>
+            <select id="oblast" name="oblast">
+                <option value="matematika">Matematika</option>
+                <option value="sport">Sport</option>
+                <option value="obrazovanje">Obrazovanje</option>
+                <option value="biologija">Biologija</option>
+            </select><br>
+
+            <label for="tezina">Tezina:</label>
+            <input type="text" id="tezina" name="tezina"><br>
+
+            <input type="submit" value="Unesi">
+        </form>
+    <% } else{ %>
+        <h1>Pogresan username ili password!</h1>
+    <% } %>
+    </div>
+</body>
+</html>
