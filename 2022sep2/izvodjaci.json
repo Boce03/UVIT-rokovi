@@ -1,0 +1,38 @@
+[{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd623"
+	},
+	"izvodjac": "Sara Jo",
+	"procenat": 85,
+	"pkostim":0,
+	"pkoreografija":0,
+	"ptekst": 0,
+	"pmelodija":0
+	
+},
+{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd624"
+	},
+	"izvodjac": "Marija Serifovic",
+	"procenat": 100,
+	"pkostim":0,
+	"pkoreografija":0,
+	"ptekst": 0,
+	"pmelodija":0
+	
+	
+},
+{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd625"
+	},
+	"izvodjac": "Zoi",
+	"procenat": 30,
+	"pkostim":0,
+	"pkoreografija":0,
+	"ptekst": 0,
+	"pmelodija":0
+	
+	
+}]

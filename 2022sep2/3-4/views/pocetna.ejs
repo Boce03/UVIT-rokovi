@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css">
+</head>
+<body>
+    <div id="rezultati">
+        <div id="sarajo">
+            <span class="ime"><%= izvodjaci[0] %></span>
+            <span class="procenat"><%= Math.round(Math.random()*100) + '%' %></span>
+        </div>
+        <div id="marijas">
+            <span class="ime"><%= izvodjaci[1] %></span>
+            <span class="procenat"><%= Math.round(Math.random()*100) + '%' %></span>
+            <img class="kruna" src="/crown2.jpeg" alt="kruna" id="pobednik">
+        </div>
+        <div id="zoi">
+            <span class="ime"><%= izvodjaci[2] %></span>
+            <span class="procenat"><%= Math.round(Math.random()*100) + '%' %></span>
+        </div>
+    </div>
+
+    <div id="prikaz">
+        <form id="forma" method="GET" action="/rezultatiglasanja">
+            <div>
+                <input type="radio" name='<%= izvodjaci[0].split(" ")[0] %>' id="rb1"><label for="rb1"><%= izvodjaci[0] %></label>
+                <input type="radio" name='<%= izvodjaci[1].split(" ")[0] %>' id="rb2"><label for="rb2"><%= izvodjaci[1] %></label>
+                <input type="radio" name="<%= izvodjaci[2].split(' ')[0] %>" id="rb3"><label for="rb3"><%= izvodjaci[2] %></label>
+            </div>
+
+            <% for(let izvodjac of izvodjaci) {%>
+                <p>Utisci o nastupu(<%= izvodjac %>):</p>
+                <ul>
+                    <li>
+                        kostimi 
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Kostimi'%>" value="1">1
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Kostimi'%>" value="2">2
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Kostimi'%>" value="3">3
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Kostimi'%>" value="4">4
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Kostimi'%>" value="5">5
+                    </li>
+                    <li>
+                        koreografija 
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Koreografija'%>" value="1">1
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Koreografija'%>" value="2">2
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Koreografija'%>" value="3">3
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Koreografija'%>" value="4">4
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Koreografija'%>" value="5">5
+                    </li>
+                    <li>
+                        tekst pesme 
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'TekstPesme'%>" value="1">1
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'TekstPesme'%>" value="2">2
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'TekstPesme'%>" value="3">3
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'TekstPesme'%>" value="4">4
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'TekstPesme'%>" value="5">5
+                    </li>
+                    <li>
+                        melodija 
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Melodija'%>" value="1">1
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Melodija'%>" value="2">2
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Melodija'%>" value="3">3
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Melodija'%>" value="4">4
+                        <input type="radio" name="<%= izvodjac.split(' ')[0] + 'Melodija'%>" value="5">5
+                    </li>
+                </ul>                    
+            <% } %>
+
+            <input type="submit" value="glasaj" id="dugme">
+        </form>
+    </div>
+
+
+    <script>
+        let forma = document.getElementById('forma');
+        forma.addEventListener('submit', function(e) {
+            let rb1 = document.getElementById('rb1');
+            let rb2 = document.getElementById('rb2');
+            let rb3 = document.getElementById('rb3');
+
+            if(!rb1.checked && !rb2.checked && !rb3.checked){
+                e.preventDefault();
+                window.alert('Morate glasati za nekog izvodjaca!');
+                return;
+            }
+        });
+    </script>
+</body>
+</html>

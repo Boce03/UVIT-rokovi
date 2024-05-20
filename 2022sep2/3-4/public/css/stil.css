@@ -1,0 +1,70 @@
+#forma {
+    display: inline-block;
+    padding: 20px;
+    border: 2px groove grey;
+    border-radius: 10%;
+    background-color: pink;
+    font-weight: bolder;
+    background-image: url(/3b.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 80px;
+    position: relative;
+}
+
+#forma input[type='submit'] {
+    position: absolute;
+    top: 98%;
+    left: 40%;
+    border-width: 2px;
+    border-radius: 100%;
+}
+
+div#rezultati {
+    width: 200px;
+}
+
+div#rezultati div {
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.procenat {
+    position: absolute;
+    right: 0;
+}
+
+#sarajo {
+    position: relative;
+    width: 85%;
+    background-color: pink;
+}
+
+#marijas {
+    position: relative;
+    width: 100%;
+    background-color: blue;
+}
+
+/*#marijas::after {
+    position: absolute;
+    right: -35px;
+    bottom: 1px;
+    content: url(crown2.jpeg);
+}*/
+
+.kruna {
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    right: -35px;
+    bottom: 2px;
+}
+
+#zoi {
+    position: relative;
+    width: 45%;
+    background-color: green;
+}

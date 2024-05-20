@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if(izvodjac != null) {%>
+    <table>
+        <tr>
+            <td>Izvodjac: </td>
+            <td><%= izvodjac.izvodjac %></td>
+        </tr>
+        <tr>
+            <td>pkostim: </td>
+            <td><%= izvodjac.pkostim %></td>
+        </tr>
+        <tr>
+            <td>pkoreografija: </td>
+            <td><%= izvodjac.pkoreografija %></td>
+        </tr>
+        <tr>
+            <td>ptekst: </td>
+            <td><%= izvodjac.ptekst %></td>
+        </tr>
+        <tr>
+            <td>pmelodija: </td>
+            <td><%= izvodjac.pmelodija %></td>
+        </tr>
+    </table>
+    <% }else { %>
+        <h1>Greska!</h1>
+    <% } %>
+</body>
+</html>
