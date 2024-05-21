@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Matematicki fakultet</h1>
+    <h2>Pretraga informacija o studentima</h2>
+    <form method="GET" action="/postignucastudenata" id="forma">
+        <label for="indeks">Broj indeksa: </label>
+        <input type="text" name="indeks" id="indeks"><br>
+        <input type="submit" value="Pretrazi">
+    </form>
+
+    <script>
+        let forma = document.getElementById('forma');
+        forma.addEventListener('submit', function(e) {
+            let indeks = document.getElementById('indeks');
+            if(indeks.value == ''){
+                e.preventDefault();
+                window.alert('Morate uneti indeks');
+                return;
+            }
+        });
+    </script>
+</body>
+</html>

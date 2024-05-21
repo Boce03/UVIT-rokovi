@@ -1,0 +1,74 @@
+[{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005d"
+  },
+  "broj indeksa": "mi10020",
+  "rok": "Januar 1",
+  "predmet":"Programiranje 2",
+  "espb":"6",
+  "ocena":"10"
+},{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005e"
+  },
+  "broj indeksa": "mi10020",
+  "rok": "Jun 1",
+  "predmet":"Geometrija 1",
+  "espb":"6",
+  "ocena":"5"
+},{
+  "_id": {
+    "$oid": "60b7b8c9c9b0c8665c7f005f"
+  },
+  "broj indeksa": "mi10020",
+  "rok": "Januar 2",
+  "predmet":"Matematicka analiza 1",
+  "espb":"20",
+  "ocena":"8"
+
+},{
+  "_id": {
+    "$oid": "60b7bd0bc9b0c8665c7f0061"
+  },
+  "broj indeksa": "mr15190",
+  "rok": "Januar 1",
+  "predmet":"Programiranje 2",
+  "espb":"6",
+  "ocena":"10"
+},{
+  "_id": {
+    "$oid": "60b7bd22c9b0c8665c7f0062"
+  },
+   "broj indeksa": "mr15190",
+  "rok": "Jun 2",
+  "predmet":"Matematicka analiza 1",
+  "espb":"20",
+  "ocena":"5"
+},{
+  "_id": {
+    "$oid": "60b7bd22c9b0c8665c7f0062"
+  },
+   "broj indeksa": "mr15190",
+  "rok": "Septembar 1",
+  "predmet":"Uoar",
+  "espb":"8",
+  "ocena":"9"
+},{
+  "_id": {
+    "$oid": "60b7bd22c9b0c8665c7f0062"
+  },
+   "broj indeksa": "mi20134",
+  "rok": "Jun 1",
+  "predmet":"Matematicka analiza 1",
+  "espb":"20",
+  "ocena":"10"
+},{
+  "_id": {
+    "$oid": "60b7bd22c9b0c8665c7f0062"
+  },
+   "broj indeksa": "mi20134",
+  "rok": "Septembar 1",
+  "predmet":"Uoar",
+  "espb":"8",
+  "ocena":"10"
+}]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css">
+</head>
+<body>
+    <div id="prikaz">
+        <div id="pocetni">
+            <img src="<%= '/' + student.fotografija %>" alt="covek" id="slika">
+            <div id="levo">
+                <p class="podebljano">Ime i prezime studenta: </p>
+                <p><%= student['ime i prezime'] %></p>
+
+                <p class="podebljano">Prosecna ocena: </p>
+                <p><%= prosek %></p>
+
+                <p class="podebljano">Osvojeno ESPB: </p>
+                <p><%= espb %></p>
+            </div>
+        </div>
+
+        <% for(let ispit of ispiti) {%>
+            <% if(ispit.ocena == 5) {%>
+                <div class="predmet pao">
+                    <span>
+                        <%= ispit.predmet + "-" + ispit.rok + "-" + ispit.ocena %>
+                    </span>
+                </div>
+            <% } else {%>
+                <div class="predmet polozio">
+                    <span>
+                        <%= ispit.predmet + "-" + ispit.rok + "-" + ispit.ocena %>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+
+    <form method="POST" action="novopolaganje" id="forma">
+        <input type="text" name="indeks" value="<%= indeks %>" hidden>
+        
+        <label for="predmet">Predmet: </label>
+        <input type="text" name="predmet" id="predmet"><br>
+
+        <label for="rok">Rok: </label>
+        <input type="text" name="rok" id="rok"><br>
+
+        <label for="espb">ESPB: </label>
+        <input type="text" name="espb" id="espb"><br>
+
+        <label for="ocena">Ocena: </label>
+        <input type="text" name="ocena" id="ocena"><br>
+
+        <input type="submit" value="Posalji">
+    </form>
+</body>
+</html>

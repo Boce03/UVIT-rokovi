@@ -1,0 +1,32 @@
+[{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd623"
+	},
+	"broj indeksa":"mi10020",
+	"ime i prezime": "Pokahontas Nesto",
+	"smer": "I", 
+	"fotografija": "pokahontas.jpeg"
+	
+},
+{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd624"
+	},
+	
+	"broj indeksa":"mr15190",
+	"ime i prezime": "Ichigo Kurosaki",
+	"smer": "R", 
+	"fotografija": "ichigo.jpg"
+	
+},
+{
+	"_id": {
+		"$oid": "60b28306a92b02c3109bd625"
+	},
+	"broj indeksa":"mi20134",
+	"ime i prezime": "Hari Poter",
+	"smer": "I", 
+	"fotografija": "hari.jpeg"
+	
+	
+}]
