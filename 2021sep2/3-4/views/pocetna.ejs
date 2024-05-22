@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/pocetna.css">
+</head>
+<body>
+    <form method="GET" action="/raspored" id="forma">
+        <div id="prikaz">
+            <label for="grupa">Grupa: </label>
+            <input type="text" name="grupa" id="grupa"> 
+        </div>
+
+        <input type="submit" value="Prikazi raspored">
+    </form>
+
+    <script>
+        let forma = document.getElementById('forma');
+        forma.addEventListener('submit', function(e) {
+            let text = document.getElementById('grupa');
+
+            if(text.value === ''){
+                e.preventDefault();
+                window.alert('Morate uneti grupu');
+                text.focus();
+                return;
+            }
+        })
+    </script>
+</body>
+</html>

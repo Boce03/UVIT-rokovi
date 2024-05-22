@@ -1,0 +1,71 @@
+#prikaz {
+    width: 95%;
+    margin: auto;
+    border: 3px solid darkslategray;
+}
+
+.naslov {
+    text-align: center;
+    color: darkslategray;
+    font-weight: bolder;
+}
+
+#tabela {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+#tabela tr td,
+#tabela tr th{
+    border: 2px solid darkslategray;
+    text-align: center;
+    color: darkslategray;
+    width: 100px;
+    overflow: auto;
+    font-weight: bold;
+}
+
+.status {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.predavanja {
+    background-color: cornflowerblue;
+}
+
+.vezbe {
+    background-color: pink;
+}
+
+#tabela tr td{
+    position: relative;
+    text-wrap: wrap;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#tabela tr th {
+    font-weight: normal;
+}
+
+.prvi {
+    width: 130px !important;
+}
+
+
+.forma {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.forma input[type='submit'] {
+    border: 2px outset black;
+}

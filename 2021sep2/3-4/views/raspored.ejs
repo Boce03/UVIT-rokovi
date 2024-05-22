@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css">
+</head>
+<body>
+    <% if(nijePrazan) {%>
+        <div id="prikaz">
+            <h1 class="naslov"><%= grupa %></h1>
+            <table id="tabela">
+                <tr>
+                    <th class="prvi"></th>
+                    <th>8:00-9:00</th>
+                    <th>9:00-10:00</th>
+                    <th>10:00-11:00</th>
+                    <th>11:00-12:00</th>
+                    <th>12:00-13:00</th>
+                    <th>13:00-14:00</th>
+                    <th>14:00-15:00</th>
+                    <th>15:00-16:00</th>
+                    <th>16:00-17:00</th>
+                    <th>17:00-18:00</th>
+                    <th>18:00-19:00</th>
+                    <th>19:00-20:00</th>
+                    <th>20:00-21:00</th>
+                </tr>
+
+                <tr>
+                    <td class="prvi">
+                        Ponedeljak
+                    </td>
+                    <% for(let k = 8; k < blok[0].pocetak; k++) {%>
+                        <td></td>
+                    <% } %>
+
+                    <% for(let cas of casovi['Ponedeljak']) { %>
+                        <% if(cas.tip == 'predavanje') {%>
+                            <td colspan="<%= cas.brojCasova %>" class="predavanja">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% }else { %>
+                            <td colspan="<%= cas.brojCasova %>" class="vezbe">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% } %>
+                    <% } %>
+
+                    <% for(let k = blok[0].kraj; k < 21; k++) {%>
+                        <td></td>
+                    <% } %>
+                </tr>
+                
+                <tr>
+                    <td class="prvi">
+                        Utorak
+                    </td>
+                    <% for(let k = 8; k < blok[1].pocetak; k++) {%>
+                        <td></td>
+                    <% } %>
+
+                    <% for(let cas of casovi['Utorak']) { %>
+                        <% if(cas.tip == 'predavanje') {%>
+                            <td colspan="<%= cas.brojCasova %>" class="predavanja">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% }else { %>
+                            <td colspan="<%= cas.brojCasova %>" class="vezbe">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% } %>
+                    <% } %>
+
+                    <% for(let k = blok[1].kraj; k < 21; k++) {%>
+                        <td></td>
+                    <% } %>
+                </tr>
+
+                <tr>
+                    <td class="prvi">
+                        Sreda
+                    </td>
+                    <% for(let k = 8; k < blok[2].pocetak; k++) {%>
+                        <td></td>
+                    <% } %>
+
+                    <% for(let cas of casovi['Sreda']) { %>
+                        <% if(cas.tip == 'predavanje') {%>
+                            <td colspan="<%= cas.brojCasova %>" class="predavanja">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% }else { %>
+                            <td colspan="<%= cas.brojCasova %>" class="vezbe">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% } %>
+                    <% } %>
+
+                    <% for(let k = blok[2].kraj; k < 21; k++) {%>
+                        <td></td>
+                    <% } %>
+                </tr>
+
+                <tr>
+                    <td class="prvi">
+                        Cetvrtak
+                    </td>
+                    <% for(let k = 8; k < blok[3].pocetak; k++) {%>
+                        <td></td>
+                    <% } %>
+
+                    <% for(let cas of casovi['Cetvrtak']) { %>
+                        <% if(cas.tip == 'predavanje') {%>
+                            <td colspan="<%= cas.brojCasova %>" class="predavanja">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% }else { %>
+                            <td colspan="<%= cas.brojCasova %>" class="vezbe">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% } %>
+                    <% } %>
+
+                    <% for(let k = blok[3].kraj; k < 21; k++) {%>
+                        <td></td>
+                    <% } %>
+                </tr>
+
+                <tr>
+                    <td class="prvi">
+                        Petak
+                    </td>
+                    <% for(let k = 8; k < blok[4].pocetak; k++) {%>
+                        <td></td>
+                    <% } %>
+
+                    <% for(let cas of casovi['Petak']) { %>
+                        <% if(cas.tip == 'predavanje') {%>
+                            <td colspan="<%= cas.brojCasova %>" class="predavanja">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% }else { %>
+                            <td colspan="<%= cas.brojCasova %>" class="vezbe">
+                                <div>
+                                    <%= cas.predmet %>
+                                    <form method="POST" action="/raspored/obrisi" class="forma">
+                                        <input type="text" name="grupa" value="<%= grupa %>" hidden>
+                                        <input type="text" name="id" value="<%= cas._id %>" hidden>
+                                        <input type="submit" value="X">
+                                    </form>
+                                </div>
+                                <div class="status">
+                                    <%= cas.tip %>
+                                </div>
+                            </td>
+                        <% } %>
+                    <% } %>
+
+                    <% for(let k = blok[4].kraj; k < 21; k++) {%>
+                        <td></td>
+                    <% } %>
+                </tr>
+            </table>
+        </div>
+    <% } else { %>
+        <h1>Nema casova za ovu grupu!</h1>
+    <% } %>
+
+    <a href="/" id="index">Pocetna stranica</a>
+</body>
+</html>

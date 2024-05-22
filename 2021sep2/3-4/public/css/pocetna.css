@@ -1,0 +1,27 @@
+form {
+    width: 40%;
+    margin: 20px;
+}
+
+#grupa {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    margin-left: 30px;
+}
+
+label {
+    font-style: italic;
+    color: darkslateblue;
+}
+
+input[type='submit'] {
+    margin-top: 20px;
+    width: 100%;
+    color: darkslateblue;
+    font-size: 11px;
+}
+
+#prikaz{
+    position: relative;
+}
