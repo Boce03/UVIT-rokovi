@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <form method="GET" action="/dogadjaji" id="forma" style="width: 70%; margin: auto;">
+        <fieldset>
+            <legend>Unesite podatke za pretragu</legend>
+            <div class="form-group row">
+                <label for="godina" class="col-md-1 col-form-label">Godina </label>
+                <div class="col-md-3">
+                    <input type="number" id="godina" name="godina" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="mesec" class="col-md-1 col-form-label">Mesec </label>
+                <div class="col-md-3">
+                    <input type="number" id="mesec" name="mesec" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="dan" class="col-md-1 col-form-label">Dan </label>
+                <div class="col-md-3">
+                    <input type="number" id="dan" name="dan" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-4">
+                    <input type="submit" value="pretrazi dogadjaje" class="btn btn-outline-primary btn-block">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script>
+    /*
+        posto nismo ispaljivalji izuzetke na vezbama,
+        validaciju forme u js, koristim kao alternativu;
+
+        takodje je i bootstrap samo deo vezbe, inace se na ovom
+        ispitu ne trazi eksplicitno
+    */
+
+    let forma = document.getElementById('forma');
+    forma.addEventListener('submit', function(e) {
+        let dan = document.getElementById('dan').value;
+        let mesec = document.getElementById('mesec').value;
+        let godina = document.getElementById('godina').value;
+
+        if(dan == '' && mesec == '' && godina == ''){
+            e.preventDefault();
+            window.alert('Morate uneti sva polja!');
+            return;
+        }
+
+        dan = parseInt(dan);
+        mesec = parseInt(mesec);
+        godina = parseInt(godina);
+
+        if(dan < 1 || dan > 31){
+            e.preventDefault();
+            window.alert('Nevalidan dan!');
+            return;
+        }
+
+        if(mesec < 1 || mesec > 12){
+            e.preventDefault();
+            window.alert('Nevalidan mesec!');
+            return;
+        }
+
+        if(godina < 1900 || godina > 2100){
+            e.preventDefault();
+            window.alert('Nevalidna godina!');
+            return;
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,100 @@
+#main {
+    margin: auto;
+    width: 90%;
+    border: 5px solid black;
+    border-bottom: 2px solid black;
+
+}
+
+#main h1 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+#prikaz {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+    border: 2px solid lightcoral;
+    background-image: url('event.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#tabela {
+    display: inline-block;
+    border: 5px outset lightblue;
+    border-left: none;
+}
+
+#tabela table {
+    border-collapse: collapse;
+    background-color: aliceblue;
+}
+
+#tabela tr td,
+#tabela tr th{
+    border-top: 5px solid lightblue;
+    border-left: none;
+    width: 200px;
+    text-align: center;
+}
+
+#tabela tr:first-child td,
+#tabela tr:first-child th {
+    border-top: none;
+}
+
+#tabela tr .bez {
+    border-top: none;
+}
+
+#tabela tr th {
+    color: lightcoral;
+}
+
+#tabela tr td {
+    color: lightskyblue;
+}
+
+#tabela tr.redPredavaci td,
+#tabela tr.redPredavaci th {
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.predavac {
+    color: black;
+    text-align: left;
+}
+
+div.predavac::before {
+    content: url('lecturer.png');
+}
+
+#forma {
+    display: inline-block;
+    margin-left: 160px;
+}
+
+#sadrzaj {
+    display: table;
+    margin: auto;
+}
+
+#forma input[type='text'],
+#forma input[type='number'] {
+    background-color: rgba(173, 216, 230, 0.764);
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#forma input[type='submit'] {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
