@@ -1,0 +1,84 @@
+#main {
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+#levo {
+    position: absolute;
+    display: inline-block;
+    left: 10%;
+}
+
+.naslov {
+    text-align: center;
+    background-color: rgba(255, 255, 0, 0.447);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#forma {
+    position: absolute;
+    display: inline-block;
+    margin-left: 10%;
+    left: 60%;
+    width: 300px;
+}
+
+#tabela {
+    border-collapse: collapse;
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+}
+
+#tabela tr td,
+#tabela tr th{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.355);
+}
+
+#tabela tr:nth-child(odd) th,
+#tabela tr:nth-child(odd) td {
+    background-color: rgba(235, 230, 206, 0.779);
+}
+
+#tabela tr:first-child th {
+    background-color: transparent;
+}
+
+#tabela tr th:first-child,
+#tabela tr td:first-child {
+    text-align: left;
+}
+
+.naslov_forma {
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.naslov_forma span {
+    color: red;
+}
+
+#forma select {
+    width: 100%;
+    height: 40px;
+}
+
+#forma input[type='submit'] {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+
+    border: 2px grey outset;
+    background-color: rgba(255, 255, 0, 0.447);
+}
